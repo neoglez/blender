@@ -3,6 +3,9 @@
    linking to external resources instead of including content in-line.
    See 'release/text/readme.html' for the end user read-me.
 
+.. image:: https://travis-ci.com/neoglez/blender.svg?branch=master
+    :target: https://travis-ci.com/neoglez/blender
+
 
 Blender
 =======
@@ -10,6 +13,7 @@ Blender
 Blender is the free and open source 3D creation suite.
 It supports the entirety of the 3D pipeline-modeling, rigging, animation, simulation, rendering, compositing,
 motion tracking and video editing.
+
 
 .. figure:: https://code.blender.org/wp-content/uploads/2018/12/springrg.jpg
    :scale: 50 %
