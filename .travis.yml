@@ -40,7 +40,7 @@ script:
   # Copy blender
   - mkdir "$TRAVIS_BUILD_DIR/blender-git"
   - cd "$TRAVIS_BUILD_DIR/blender-git"
-  - mv "$TRAVIS_BUILD_DIR/blender" "$TRAVIS_BUILD_DIR/blender-git"
+  - mv "$TRAVIS_BUILD_DIR" "$TRAVIS_BUILD_DIR/blender-git"
   # Download Libraries (building using the recommended precompiled libraries). 
   - mkdir "$TRAVIS_BUILD_DIR/blender-git/lib"
   - cd "$TRAVIS_BUILD_DIR/blender-git/lib"
