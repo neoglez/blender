@@ -4,11 +4,15 @@ python:
   - "2.7"
   - "3.5"
   - "3.6"
-install:
+git:
+  - submodules: false
+apt:
+  packages:
+  - git
+  - subversion
+
+pre-install:
   - sudo apt-get update
-  # We can install git and svn system-wide
-  - sudo apt-get install git
-  - sudo apt-get install subversion
   # We do this conditionally because it saves us some downloading if the
   # version is the same.
   - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
@@ -23,22 +27,22 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-
+  
   # Create conda environment
   - conda create -q -n test-environment python=3.7
   - conda activate test-environment
   - python setup.py install
-  
-  # install needed modules
-  - conda install -c anaconda cmake 
-  
 
+install:
+  # install needed modules
+  - conda install -c anaconda cmake  
+  
 script:
   # Build blender as a python module in a conda environment
-  # Download blender
+  # Copy blender
   - mkdir ~/blender-git
   - cd ~/blender-git
-  - git clone https://git.blender.org/blender.git
+  - mv ~/blender ~/blender-git/
   # Download Libraries (building using the recommended precompiled libraries). 
   - mkdir ~/blender-git/lib
   - cd ~/blender-git/lib
