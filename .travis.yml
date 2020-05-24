@@ -42,10 +42,10 @@ script:
   - cd "$TRAVIS_BUILD_DIR/../blender-git"
   - mv "$TRAVIS_BUILD_DIR" "$TRAVIS_BUILD_DIR/../blender-git"
   # Download Libraries (building using the recommended precompiled libraries). 
-  - mkdir "$TRAVIS_BUILD_DIR/../blender-git/lib"
-  - cd "$TRAVIS_BUILD_DIR/../blender-git/lib"
+  - mkdir ./lib
+  - cd ./lib
   - svn checkout https://svn.blender.org/svnroot/bf-blender/trunk/lib/linux_centos7_x86_64
   # Update and Build. Get latest source code and add-ons, and build.
-  - cd "$TRAVIS_BUILD_DIR/../blender-git/blender"
+  - cd ..
   - make update
   - make bpy
