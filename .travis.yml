@@ -46,6 +46,6 @@ script:
   - cd ./lib
   - svn checkout https://svn.blender.org/svnroot/bf-blender/trunk/lib/linux_centos7_x86_64
   # Update and Build. Get latest source code and add-ons, and build.
-  - cd ..
+  - cd ./../blender
   - make update
   - make bpy
