@@ -34,6 +34,7 @@ install:
   - conda activate test-environment
   # install needed modules
   - conda install -c anaconda cmake pyopengl
+  - export OPENGL_INCLUDE_DIR="$CONDA_PREFIX/lib/python3.7/site-packages/OpenGL/"
   
 script:
   # Build blender as a python module in a conda environment
